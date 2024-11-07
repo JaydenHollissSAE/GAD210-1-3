@@ -66,17 +66,17 @@ public class Controls : MonoBehaviour
         {
             ChangeCharacter(0);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             ChangeCharacter(1);
 
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             ChangeCharacter(2);
 
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             ChangeCharacter(3);
 
@@ -98,7 +98,7 @@ public class Controls : MonoBehaviour
         }
         if (gachaActive)
         {
-            if (Input.GetKeyDown(KeyCode.L)) 
+            if (Input.GetKeyDown(KeyCode.H)) 
             {
                 //Debug.Log("Pressed Button");
                 gachaSystem.GetComponent<Gacha>().Caclulation();
