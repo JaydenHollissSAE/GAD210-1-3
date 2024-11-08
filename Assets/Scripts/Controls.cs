@@ -12,6 +12,7 @@ public class Controls : MonoBehaviour
     public List<GameObject> charactersList = new List<GameObject>();
     private GameObject activeCharacter;
     private DataStorage dataStorage;
+    private int gems;
 
     // Start is called before the first frame update
     private void Awake()
@@ -62,6 +63,7 @@ public class Controls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        gems = dataStorage.gems;
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             ChangeCharacter(0);
@@ -101,7 +103,14 @@ public class Controls : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.H)) 
             {
                 //Debug.Log("Pressed Button");
-                gachaSystem.GetComponent<Gacha>().Caclulation();
+                if (gems >= 100)
+                {
+                    gachaSystem.GetComponent<Gacha>().Caclulation();
+                }
+                else
+                {
+                    gachaSystem.GetComponent<Gacha>().NoGems();
+                }
             }
         }
         if (Input.GetKeyDown(KeyCode.R))

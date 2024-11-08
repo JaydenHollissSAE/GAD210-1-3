@@ -123,4 +123,10 @@ public class Gacha : MonoBehaviour
             //Debug.Log("Final2");
         }
     }
+
+    public void NoGems()
+    {
+        resultText.text = "100 gems needed to pull";
+    }
+
 }

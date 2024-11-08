@@ -10,7 +10,7 @@ public class DataStorage : MonoBehaviour
 {
     public float rigFactor;
     public static DataStorage instance;
-    public int gems = 0;
+    public int gems = 300;
     public List<GameObject> legendary;
     public List<GameObject> epic;
     public List<GameObject> uncommon;
@@ -54,7 +54,7 @@ public class DataStorage : MonoBehaviour
         }
         else
         {
-            gems = 0;
+            gems = 300;
         }
         if (PlayerPrefs.HasKey("UnlockedCharacters"))
         {
